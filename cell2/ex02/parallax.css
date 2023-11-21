@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+.img{
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    line-height: 100vh;
+    
+}
+.one{
+    background-image: url(https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg);
+    font-size: xx-large;
+}
+.two{
+    background-image: url(https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg);
+    font-size: xx-large;
+}
+.caption{
+    height: 60vh;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    background-color: black;
+}

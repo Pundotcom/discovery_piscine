@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo{
+            background-color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            color: rgb(0, 0, 0);
+            text-align: start;font-size: xx-large;
+        }
+        .btn{
+            /* position: fixed; */
+            bottom: 1rem;
+            right: 1rem;
+            border-radius: 16px;
+            padding: 20px;
+            margin-left: 5px;
+            background-color: rgb(10, 0, 0);
+            border: 2px solid lightblue;
+            color: white;
+        }
+        .table{
+            border: 0px;
+            background-color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            text-align: center;
+            color: white;
+            background-color: #515151;
+        }
+        
+    </style>
+     
+</head>
+<body>
+  <div class="container">
+    <div id="ft_list" class="table"></div>
+    <button type="button" onclick="ADDTodo()" class="btn">New</button>
+  </div>
+  <script src="todo.js"></script>
+</body>
+
+</html>
+

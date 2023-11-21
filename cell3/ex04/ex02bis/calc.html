@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<style>
+		input{
+			font-size: xx-large;
+			background-color: bisque;
+		}
+		input:hover{
+			box-shadow: 0 0 11px rgba(33,33,33,.2); 
+		}
+		.try{
+			margin-top: 2rem;
+		}		
+	</style>	
+</head>
+<body>
+	<div class="container">
+		<input type="text" id="input1" />
+		<select id="operator">
+			<option value="add" id="add">+</option>
+			<option value="sub" id="sub">-</option>
+			<option value="multi" id="multi">*</option>
+			<option value="divi" id="divi">/</option>
+			<option value="modul" id="modul">%</option>
+		</select>
+		<input type="text" id="input2"  /><br>
+		<input class='try' type="submit" value="Try Me!" onclick="calcuMath()">
+	</div>
+	<script>
+		function calcuMath() {
+			let result;
+			let input1 = $("#input1").val().trim();
+			let input2 = $("#input2").val().trim();
+			console.log(typeof(input1));
+			if (input1 == "Infinity" || input2 == "Infinity"){
+				alert("Error :(");
+				return ;
+			}
+			let option = $("#operator").val();
+			
+			if (input1 < 0 || input2 < 0 || isNaN(input1) || isNaN(input2) || input1 === ''|| input2 === '' ) {
+				alert("Error :(");
+				return;
+			} 
+			else if (((option === 'divi') || (option === 'modul')) && input2 == 0 ) {
+				console.log("Its over 9000!");
+				alert("Its over 9000!");
+				return;
+			}
+			
+			else {
+
+				input1 = parseInt(input1)
+				input2 = parseInt(input2)
+
+				if (option === "add") {
+				result = input1 + input2;
+			}
+				if (option === "sub") {
+				result = input1 - input2;
+			}
+				if (option === "multi") {
+				result = input1  * input2;
+			}
+				if (option === "divi" ) {
+				result = input1 / input2;
+			}
+				if (option === "modul") {
+				result = input1 % input2;
+			}
+				}
+
+			console.log(result);
+			alert('result : ' + result );
+				
+		}
+		setTimeout(function(){ alert("Please, use me"); }, 30000);
+	</script>
+</body>
+</html>

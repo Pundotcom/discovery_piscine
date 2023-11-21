@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<style>
+		input{
+			font-size: xx-large;
+			background-color: bisque;
+		}
+		input:hover{
+			box-shadow: 0 0 11px rgba(33,33,33,.2); 
+		}
+		.try{
+			margin-top: 2rem;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<input type="text" id="input1" pattern="[0-9]+" />
+		<select id="operator">
+			<option value="add" id="add">+</option>
+			<option value="sub" id="sub">-</option>
+			<option value="multi" id="multi">*</option>
+			<option value="divi" id="divi">/</option>
+			<option value="modul" id="modul">%</option>
+		</select>
+		<input type="text" id="input2" pattern="[0-9]+" /><br>
+		<input class='try' type="submit" value="Try Me!" onclick="calcuMath()">
+	</div>
+	<script>
+		function calcuMath() {
+			var result;
+			var input1  = parseInt(document.getElementById("input1").value);
+			var input2 = parseInt(document.getElementById("input2").value);
+			var sel = document.getElementById("operator");
+			var option = sel.options[sel.selectedIndex].value;
+			var add = document.getElementById("add");
+			var sub = document.getElementById("sub");
+			var multi = document.getElementById("multi");
+			var divi = document.getElementById("divi");
+			var modul = document.getElementById("modul");
+			console.log(input1,input2);
+			
+			if (((option === 'divi') || (option === 'modul')) && input2 == 0) {
+				console.log("Its over 9000!");
+				alert("Its over 9000!");
+				return;
+			}	
+			if (option === "add") {
+				result = input1  + input2;
+			}
+			if (option === "sub") {
+				result = input1  - input2;
+			}
+			if (option === "multi") {
+				result = input1  * input2;
+			}
+			if (option === "divi" ) {
+				result = input1 / input2;
+			}
+			if (option === "modul") {
+				result = input1 % input2;
+			}
+			if (input1 >= 0 && input2 >= 0) {
+				console.log(result);
+				alert('result : ' + result );
+			} else {
+				console.log("Error :(");
+				alert("Error :(");
+			}	
+				
+		}
+		setTimeout(function(){ alert("Please, use me"); }, 3000);
+	</script>
+</body>
+</html>

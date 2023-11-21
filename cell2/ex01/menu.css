@@ -1,0 +1,17 @@
+h1 {
+	text-align: center;
+}
+img {
+	object-fit: cover;
+}
+
+.panel {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	height: 400px;
+}
+.data{
+    border: 2px solid black;
+    padding: 2rem;
+}
